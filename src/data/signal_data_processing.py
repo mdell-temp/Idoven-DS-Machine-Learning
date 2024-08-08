@@ -1,8 +1,6 @@
 from typing import List, Union
-
 import numpy as np
 from scipy.ndimage import gaussian_filter
-# from scipy.signal import butter, medfilt, savgol_filter, sosfiltfilt
 from scipy import signal as sg
 
 def smooth_signal_savgol(ecg_signal: np.ndarray, window_length: int, polyorder: int = 3) -> np.ndarray:
