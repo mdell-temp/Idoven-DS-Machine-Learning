@@ -59,9 +59,10 @@ def plot_loss_evolution(train_losses: np.ndarray,
     ax3.set_title('Training and Validation Loss')
     ax3.set_xticks(epochs_to_plot)
     ax3.legend()
-    
-    plt.suptitle('Training and Validation Loss')
+    plt.suptitle(f"Training and Validation Loss", fontsize=16, y = 1.02)
+    # plt.suptitle('Training and Validation Loss')
     plt.tight_layout(rect=[0, 0, 1, 0.95])
+    # Add main title and adjust the space
     if dst_dir is not None:
         plt.savefig(str(dst_dir.joinpath("loss_evolution.png")))
     if show:
@@ -132,9 +133,15 @@ def plot_pr_curves(ground_truth: np.ndarray,
     for j in range(i + 1, len(axs)):
         fig.delaxes(axs[j])
 
-    plt.tight_layout()
+    # plt.tight_layout()
+    # Add main title and adjust the space
+    fig.suptitle(f"Precision-Recall curve on {data_type} Data", fontsize=16, y=1.02)
+
+    # Adjust layout to make room for the main title
+    plt.tight_layout(rect=[0, 0, 1, 0.95])
+    
     if dst_dir is not None:
-        plt.savefig(str(dst_dir.joinpath(f"{data_type}_pr_curves.png")))
+        plt.savefig(str(dst_dir.joinpath(f"{data_type}_pr_curves.png")), bbox_inches='tight')
     if show:
         plt.show()
 
@@ -185,9 +192,14 @@ def plot_cm_multilabel(ground_truth: np.ndarray,
     for i in range(len(labels_name), len(axes)):
         fig.delaxes(axes[i])
 
-    plt.tight_layout()
+    # Add main title and adjust the space
+    fig.suptitle(f"Confusion Matrix on {data_type} Data", fontsize=16, y=1.02)
+
+    # Adjust layout to make room for the main title
+    plt.tight_layout(rect=[0, 0, 1, 0.95])
+    
     if dst_dir is not None:
-        plt.savefig(str(dst_dir.joinpath(f"{data_type}_confusion_matrices.png")))
+        plt.savefig(str(dst_dir.joinpath(f"{data_type}_confusion_matrices.png")), bbox_inches='tight')
     if show:
         plt.show()
 
@@ -205,49 +217,3 @@ def plot_lr_evolution(lrs: np.ndarray, dst_dir: Path = None, show: bool = True) 
         plt.savefig(str(dst_dir.joinpath("lr_evolution.png")))
     if show:
         plt.show()
-
-
-# @staticmethod
-# def report(y_true, y_pred, labels_name):
-
-#     # micro: averages metrics across all classes, emphasizing overall performance
-#     # macro: averages metrics independently for each class, giving equal weight to each class
-#     accuracy = accuracy_score(y_true, y_pred)
-
-#     # proportion of predicted positive cases that are actually positive across all classes
-#     precision_micro = precision_score(y_true, y_pred, average='micro')
-#     precision_macro = precision_score(y_true, y_pred, average='macro')
-#     precision_weighted = precision_score(y_true, y_pred, average='weighted')
-#     # proportion of actual positive cases that are correctly predicted as positive across all classes
-#     recall_micro = recall_score(y_true, y_pred, average='micro')
-#     recall_macro = recall_score(y_true, y_pred, average='macro')
-#     recall_weighted = recall_score(y_true, y_pred, average='weighted')
-
-#     f1_micro = f1_score(y_true, y_pred, average='micro')
-#     f1_macro = f1_score(y_true, y_pred, average='macro')
-#     f1_weighted = f1_score(y_true, y_pred, average='weighted')
-
-#     # measures the fraction of labels that are incorrectly predicted
-#     h_loss = hamming_loss(y_true, y_pred)
-
-#     # measures similarity between the predicted and true label sets
-#     jaccard = jaccard_score(y_true, y_pred, average='samples')
-
-#     class_report = classification_report(y_true, y_pred, target_names=labels_name, zero_division=0)
-
-#     print("Overall Metrics:")
-#     print(f"Accuracy: {accuracy:.3f} (higher is better)")
-#     print(f"Precision (Micro): {precision_micro:.3f} (higher is better)")
-#     print(f"Precision (Macro): {precision_macro:.3f} (higher is better)")
-#     print(f"Precision (Weighted): {precision_weighted:.3f} (higher is better)")
-#     print(f"Recall (Micro): {recall_micro:.3f} (higher is better)")
-#     print(f"Recall (Macro): {recall_macro:.3f} (higher is better)")
-#     print(f"Recall (Weighted): {recall_weighted:.3f} (higher is better)")
-#     print(f"F1-Score (Micro): {f1_micro:.3f} (higher is better)")
-#     print(f"F1-Score (Macro): {f1_macro:.3f} (higher is better)")
-#     print(f"F1-Score (Weighted): {f1_weighted:.3f} (higher is better)")
-#     print(f"Hamming Loss: {h_loss:.3f} (lower is better)")
-#     print(f"Jaccard Score: {jaccard:.3f} (higher is better)\n")
-
-#     print("\nClassification Report:")
-#     print(f"{class_report}")
