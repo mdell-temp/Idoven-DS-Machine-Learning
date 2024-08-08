@@ -18,10 +18,9 @@ from data import dataset
 from evaluation import visualize as mlplots
 from utils.utilities import EarlyStopping, balance_input, setup_logging
 
-
 class Pipeline():
 
-    def __init__(self, model: torch.nn.Module, labels_name: List, seed: int = 42):
+    def __init__(self, model: torch.nn.Module, labels_name: List, seed: int = 42, results_dir = None):
         """ Pipeline for model training and testing.
 
         Args:
@@ -34,9 +33,12 @@ class Pipeline():
         # results folder
         date = datetime.today().strftime('%Y_%m_%d')
         hour = datetime.today().strftime('%H_%M_%S')
-        self.dst_dir = Path(f"results/{date}/{hour}_{self.model.model_name}")
-        if not self.dst_dir.exists():
-            self.dst_dir.mkdir(parents=True, exist_ok=True)
+        if results_dir:
+            self.dst_dir =  Path(f"{results_dir}")
+        else:
+            self.dst_dir = Path(f"results/{date}/{hour}_{self.model.model_name}")
+            if not self.dst_dir.exists():
+                self.dst_dir.mkdir(parents=True, exist_ok=True)
 
         logger.info("Initiating model")
 
@@ -259,9 +261,6 @@ class Pipeline():
 
         self.report(test_ds.labels_bin, predictions, self.labels_name)
 
-        
-
-
     def evaluate(self, x_eval: np.ndarray, y_eval: np.ndarray, batch_size: int = 512) -> None:
         """ Evaluates a model
 
@@ -292,16 +291,6 @@ class Pipeline():
         total_time_min = (val_end - val_start) / 60
         logger.info(f"total time: {total_time_min:.2f} minutes")
 
-        # # metrics
-        # predictions = torch.cat(predictions).detach().cpu().numpy()
-
-        # self.test_thresholds = self.plot_pr_curves(y_eval, predictions, label_names, data_type="test")
-        # self.test_thresholds = np.array([self.test_thresholds[l] for l in label_names])
-        # predictions = (predictions > self.test_thresholds).astype(int)
-
-        # self.plot_cm_multilabel(y_eval, predictions, label_names, data_type="test")
-
-        # self.report(y_eval, predictions, label_names)
 
     def predict(self, x: np.ndarray, batch_size: int = 512, logits: bool = False) -> np.ndarray:
         """ Predicts the classes from a given input
@@ -332,65 +321,6 @@ class Pipeline():
         predictions = torch.cat(predictions).detach().cpu().numpy()
 
         return predictions
-
-    # def export_to_onnx(self, input_example: np.ndarray, thresholds: np.ndarray = None) -> None:
-    #     """ Convert the model to ONNX.
-
-    #     Args:
-    #         input_example (np.ndarray): Input data to test the converted model
-    #         thresholds (np.ndarray, optional): Thresholds to confirm a class. Defaults to 0.5
-
-    #     """
-    #     model_path = Path(self.dst_dir.joinpath("checkpoint.pt"))
-    #     model_name = f"{model_path.stem}.onnx"
-    #     model_name = self.dst_dir.joinpath(model_name)
-    #     x = torch.from_numpy(input_example).float().to(self.device)
-
-    #     torch.onnx.export(
-    #         self.model,
-    #         x,
-    #         model_name,
-    #         verbose=False,
-    #         export_params=True,
-    #         opset_version=14,
-    #         do_constant_folding=True,
-    #         input_names=['input'],
-    #         output_names=['output'],
-    #     )
-
-    #     onnx_model = onnx.load(str(model_name))
-    #     onnx.checker.check_model(onnx_model)
-
-    #     ort_session = onnxruntime.InferenceSession(model_name,
-    #                                                providers=['CUDAExecutionProvider', 'CPUExecutionProvider'])
-
-    #     # example output with ONNX model
-    #     onnx_inputs = {ort_session.get_inputs()[0].name: input_example.astype(np.float32)}
-    #     onnx_outs = ort_session.run(None, onnx_inputs)[0]
-
-    #     def sigmoid(x):
-    #         return 1 / (1 + np.exp(-x))
-
-    #     if thresholds is None:
-    #         thresholds = np.ones(self.num_classes, dtype=float) * 0.5
-
-    #     for i in range(len(onnx_outs)):
-    #         onnx_outs[i] = np.where(sigmoid(onnx_outs[i]) > thresholds, 1, 0)
-    #         onnx_outs[i] = np.where(sigmoid(onnx_outs[i]) > thresholds, 1, 0)
-
-    #     torch_outs = self.predict(input_example, logits=False)
-    #     torch_outs = np.where(torch_outs > thresholds, 1, 0)
-
-    #     try:
-    #         for torch_out, onnx_out in zip(torch_outs, onnx_outs):
-    #             torch_out = torch_out.astype(int)
-    #             onnx_out = onnx_out.astype(int)
-    #             # absolute_error = np.linalg.norm(torch_out - onnx_out)
-    #             # relative_error = absolute_error / np.linalg.norm(torch_out)
-    #             np.testing.assert_allclose(torch_out, onnx_out, rtol=1e-03, atol=1e-02)
-    #         logger.info("Exported model has been tested with ONNXRuntime, and the results match!")
-    #     except AssertionError:
-    #         logger.info("!!! ONNX exported model is not compatible with the original !!! \n")
 
     def report(self, y_true, y_pred, label_names):
 
@@ -435,6 +365,7 @@ class Pipeline():
 
         logger.info(f"Classification Report:\n{class_report}")
 
+        
 
 if __name__ == "__main__":
     import core.dataloader as crloader
