@@ -8,5 +8,8 @@ __pycache__/
 # Jupyter Notebook checkpoint files
 .ipynb_checkpoints/
 
-# Data folder
+# Data folder containing data ignored for git
 data/
+
+# include src/data/ sonatining code
+!src/data/
