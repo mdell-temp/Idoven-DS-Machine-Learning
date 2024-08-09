@@ -226,10 +226,17 @@ class Pipeline():
 
         self.report(val_ds.labels_bin, predictions, self.labels_name)
 
-    def evaluate_on_testset(self,
+    def evaluate(self,
               test_ds: dataset.ECGDataset,
-              batch_size: int,
-              half_precision: bool = False) -> None:
+              batch_size: int,) -> None:
+
+        """
+        Evaluates a trained model on a test dataset.
+
+        Args:
+            test_ds (ECGDataset): The test dataset to evaluate the model on.
+            batch_size (int): The number of samples per batch to load.
+        """
         
         test_loader = dataset.make_dataloader(ds=test_ds, batch_size=batch_size)
 
@@ -265,66 +272,38 @@ class Pipeline():
 
         self.report(test_ds.labels_bin, predictions, self.labels_name)
 
-    def evaluate(self, x_eval: np.ndarray, y_eval: np.ndarray, batch_size: int = 512) -> None:
-        """ Evaluates a model
 
-        Args:
-            x_val (np.ndarray): Evaluation input data
-            y_val (np.ndarray): Evaluation label data
-            learning_rate (float): Maximum learning rate
-            batch_size (int): Batch size
+
+    def predict(self, ds: dataset.ECGDataset, batch_size: int = 512, logits: bool = False) -> np.ndarray:
         """
-
-        # create the dataloader
-
-        val_loader, _ = self.make_dataloader(x_data=x_eval,
-                                             y_data=y_eval,
-                                             batch_size=batch_size,
-                                             use_sampler=False,
-                                             is_val=True)
-
-        predictions = []
-
-        self.model.eval()
-        val_start = time.time()
-        with torch.no_grad():
-            for data, target in val_loader:
-                output = self.model(data.to(self.device))
-                predictions.append(torch.nn.functional.sigmoid(output))
-        val_end = time.time()
-        total_time_min = (val_end - val_start) / 60
-        logger.info(f"total time: {total_time_min:.2f} minutes")
-
-
-    def predict(self, x: np.ndarray, batch_size: int = 512, logits: bool = False) -> np.ndarray:
-        """ Predicts the classes from a given input
+        Predicts the classes from a given ECG dataset.
 
         Args:
-            x (np.ndarray): ECG signals (batch size, dimensions, timesteps)
-            batch_size (int, optional): Batch size. Defaults to 512.
-            logits (bool, optional): To output the logits.
+            test_ds (ECGDataset): The test dataset containing ECG signals.
+            batch_size (int, optional): The number of samples per batch to load. Defaults to 512.
+            logits (bool, optional): If True, returns the raw logits instead of probabilities. Defaults to False.
 
         Returns:
-            np.ndarray: Model's predictions
+            np.ndarray: The model's predictions as a numpy array.
         """
 
-        if x.shape[0] < batch_size:
-            batch_size = x.shape[0]
-
-        pred_loader, _ = self.make_dataloader(x_data=x, batch_size=batch_size, use_sampler=False, is_val=False)
+        # Create a DataLoader for the test dataset
+        pred_loader = dataset.make_dataloader(ds=ds, batch_size=batch_size)
 
         self.model.eval()
         predictions = []
         with torch.no_grad():
             for data in pred_loader:
-                output = self.model(data[0].to(self.device))
+                output = self.model(data.to(self.device))
                 if logits:
                     predictions.append(output)
                 else:
                     predictions.append(torch.nn.functional.sigmoid(output))
+        
         predictions = torch.cat(predictions).detach().cpu().numpy()
 
         return predictions
+
 
     def report(self, y_true, y_pred, label_names):
 
@@ -368,44 +347,3 @@ class Pipeline():
         logger.info(f"Jaccard Score: {jaccard:.3f} (higher is better)")
 
         logger.info(f"Classification Report:\n{class_report}")
-
-        
-
-if __name__ == "__main__":
-    import core.dataloader as crloader
-    from core.model.architectures import FullyConvolutionalNetwork
-
-    logger = setup_logging("training_pipeline.log")
-
-    epochs = 50
-    batch_size = 128
-    learning_rate = 0.001
-
-    logger.info("Loading data...")
-    data = crloader.load_data(
-        data_path='../../data/ptbxl/',
-        sampling_rate=100)
-    logger.info("Data loaded.")
-
-    for aug_type in [None, "under", "over"]:
-        train_ds = dataset.ECGDataset(data=data, apply_sampler=False, ds_type="train", shuffle=True, augmentation=aug_type)
-        val_ds = dataset.ECGDataset(data=data, apply_sampler=False, ds_type="val", shuffle=True)
-        test_ds = dataset.ECGDataset(data=data, apply_sampler=False, ds_type="test")
-
-        model = FullyConvolutionalNetwork(num_classes=train_ds.num_classes,
-                                          channels=train_ds.channels,
-                                          filters=[128, 256, 128],
-                                          kernel_sizes=[8, 5, 3],
-                                          linear_layer_len=128)
-
-        pipe = Pipeline(model=model, labels_name=train_ds.labels_class)
-
-        pipe.train(train_ds=train_ds,
-                   val_ds=val_ds,
-                   epochs=epochs,
-                   batch_size=batch_size,
-                   lr=learning_rate,
-                   patience=10,
-                   delta_stop=0,
-                   val_every=1,
-                   half_precision=False)
