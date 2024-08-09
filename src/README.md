@@ -138,7 +138,7 @@ Run the Docker:
 
 ## License
 
-This project is licensed under the [MIT](LICENCE) License (following references)
+This project is licensed under the [MIT](src/LICENCE) License (following references)
 
 ## Notes
 
