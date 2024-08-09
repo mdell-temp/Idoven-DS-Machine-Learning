@@ -1,4 +1,4 @@
-# Machine Learning Task
+# Machine Learning Task - Proposed approach
 
 ### Candidate
 -
@@ -25,7 +25,7 @@ Here's the structure of the repository:
 │   │
 │   ├── data # folder with dataloading and processing modules
 │   │   ├── data_augmentation.py
-│   │   ├── data_plots.p
+│   │   ├── data_plots.py
 │   │   ├── dataloader.py
 │   │   ├── dataset.py
 │   │   └── signal_data_processing.py
@@ -91,28 +91,28 @@ Run the Docker:
 
 1. Build the Docker image:
 
-```bash
-docker build -t ecg-classification .
-```
+    ```bash
+    docker build -t ecg-classification .
+    ```
 
 2. Run the docker container:
-```bash
-# for Ubuntu replace %cd%\ with $pwd
-docker run -p 8888:8888 -v %cd%\src:/app/src ecg-classification # CPU
-# or
-docker run --gpus=all -p 8888:8888 -v %cd%\src:/app/src ecg-classification # GPU
-```
-This will start a Docker container and expose port 8888. You can access Jupyter Lab session by navigating to http://localhost:8888 in your web browser.
+    ```bash
+    # for Ubuntu replace %cd%\ with $pwd
+    docker run -p 8888:8888 -v %cd%\src:/app/src ecg-classification # CPU
+    # or
+    docker run --gpus=all -p 8888:8888 -v %cd%\src:/app/src ecg-classification # GPU
+    ```
+    This will start a Docker container and expose port 8888. You can access Jupyter Lab session by navigating to http://localhost:8888 in your web browser.
 
 
 3. Navigate through the project:
 
-- Open and run the `assignment.ipynb` to see the proposed solution and perform EDA, train ML models and evaluate the trained models.
+    - Open and run the `assignment.ipynb` to see the proposed solution and perform EDA, train ML models and evaluate the trained models.
 
-- Run the pipeline from command line (check the accepted arguments) 
-```python 
-python main.py [OPTIONS]
-```
+    - Run the pipeline from command line (check the accepted arguments) 
+    ```python 
+    python main.py [OPTIONS]
+    ```
 
 
 
