@@ -16,27 +16,9 @@ data/
 
 # Data folder containing data ignored for git
 
-# Experiments:
-
-# Ignore all content inside src/experiments/
-# src/experiments/*
-
-# Ignore everything inside src/experiments/EDA/, src/experiments/results/, and src/experiments/logs/
-src/experiments/EDA/*
-src/experiments/results/*
-src/experiments/logs/*
-
-# Do not ignore the example folder and its contents inside EDA
-!src/experiments/EDA/example/
-!src/experiments/EDA/example/**
-
-# Do not ignore the example folder and its contents inside results
-!src/experiments/results/example/
-!src/experiments/results/example/**
-
-# Do not ignore the example folder and its contents inside logs
-!src/experiments/logs/example/
-!src/experiments/logs/example/**
-
-
+#experiments
+# do not store the content
+src/experiments/* 
+# just empty folder for repo structure
+!src/experiments/
 
