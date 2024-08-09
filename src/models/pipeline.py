@@ -8,8 +8,6 @@ from pathlib import Path
 from typing import List, Union
 
 import numpy as np
-import onnx
-import onnxruntime
 import torch
 from sklearn.metrics import (accuracy_score, classification_report, f1_score, hamming_loss, jaccard_score,
                              precision_score, recall_score)
