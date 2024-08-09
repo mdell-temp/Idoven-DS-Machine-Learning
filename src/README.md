@@ -18,32 +18,50 @@ Here's the structure of the repository:
 
 ```plaintext
 .
-├── data
-│   ├── ptbxl
+├── data # folder with ECG data
 │   ├── download_data.sh
 │   └── README.md
-├── src
-│   ├── assignment.ipynb
-│   ├── data
-│   │   ├── dataset.py
+├── src # folder with proposed approach
+│   │
+│   ├── data # folder with dataloading and processing modules
+│   │   ├── data_augmentation.py
+│   │   ├── data_plots.p
 │   │   ├── dataloader.py
-│   │   └── data_augmentation.py
-│   ├── utils
-│   │   ├── utilities.py
-│   │   └── data_augmentation.py
+│   │   ├── dataset.py
+│   │   └── signal_data_processing.py
+│   │
+│   ├── evaluation # folder with evaluation modules
+│   │   └── visualize.py
+│   │
+│   ├── experiments # folder with experiments 
+│   │   ├── EDA/
+│   │   ├── logs/
+│   │   └── results/
+│   │
+│   ├── models # folder with ML models 
+│   │   ├── architectures.py
+│   │   └── pipeline.py
+│   │
+│   ├── utils # folder with useful functions
+│   │   ├── logger.py
+│   │   └── utilities.py
+│   │
+│   ├── assignment.ipynb # Jupyter Notebook as asked
+│   ├── main.py # file for cmd line training
 │   ├── requirements.txt
 │   └── README.md
-├── Dockerfile
-├── README.md
-└── references
-    └── reference_documentation.pdf
-
-<!-- ├── scripts
-│   ├── preprocess_data.py
-│   ├── train_model.py
-│   └── evaluate_model.py -->
-
+│   
+├── Dockerfile # Consistent setup across different platforms.
+└── README.md
 ```
+
+**Structure Rationale**
+
+The structure is designed for simplicity and clarity, aligning with the assignment requirements. It provides a logical flow from data processing through model evaluation, making it easy to follow and reproduce the steps taken. By organizing code into distinct modules and separating experiments, the structure enhances readability and maintainability, ensuring that the focus remains on answering the assignment questions effectively.
+
+Main component:
+- `assignment.ipynb`: The Jupyter Notebook containing the answers to the assignment, structured into sections for EDA, ML classification, and a conclusion with references, providing a comprehensive response to the task.
+
 ## Getting Started
 
 ### Prerequisites
@@ -57,8 +75,8 @@ Ensure you have the following installed:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git # clone the repo
-cd your-repo # move inside the repo folder
+git clone https://github.com/mdell-temp/Idoven-DS-Machine-Learning.git # clone the repo
+cd Idoven-DS-Machine-Learning # move inside the repo folder
 ```
 
 **Docker** 
@@ -84,7 +102,17 @@ docker run -p 8888:8888 -v %cd%\src:/app/src ecg-classification # CPU
 # or
 docker run --gpus=all -p 8888:8888 -v %cd%\src:/app/src ecg-classification # GPU
 ```
-This will start a Docker container and expose port 8888. You can access Jupyter Notebook by navigating to http://localhost:8888 in your web browser.
+This will start a Docker container and expose port 8888. You can access Jupyter Lab session by navigating to http://localhost:8888 in your web browser.
+
+
+3. Navigate through the project:
+
+- Open and run the `assignment.ipynb` to see the proposed solution and perform EDA, train ML models and evaluate the trained models.
+
+- Run the pipeline from command line (check the accepted arguments) 
+```python 
+python main.py [OPTIONS]
+```
 
 
 
