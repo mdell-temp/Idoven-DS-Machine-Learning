@@ -113,10 +113,33 @@ Run the Docker:
         ```python 
         python main.py [OPTIONS]
         ```
-        
+
         check the accepted arguments by running:
         ```python 
         python main.py --help
         ```
 
+## TODO List
 
+- **Generalize the Pipeline class** for more flexibility and reuse.
+- **Incorporate additional model architectures** to explore a wider range of approaches.
+- **Implement MLflow, Neptune, or W&B** for interactive experiment tracking.
+- **Add test (pyunit, pytest) for continuous integration** to ensure code quality and reliability.
+- **Develop a comprehensive benchmarking setup** for comparing multiple models effectively.
+- **Document functions in the code** with descriptions of their libraries, arguments, and return values.
+
+
+## References
+- [PhysioNet PTB-XL Database](https://physionet.org/content/ptb-xl/1.0.2/) for foundational knowledge and dataset details.
+- [GitHub Repository by Roios](https://github.com/Roios/ptb_ecg_classification/tree/main) for implementation insights and practical approaches.
+- [Automated ECG Interpretation Repository](https://github.com/AutoECG/Automated-ECG-Interpretation) for advanced modeling techniques and benchmarks.
+- [From ECG signals to images: a transformation based approach for deep learning](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7959637/) intresting paper.
+- [ECG Arrhythmia classification](https://github.com/lxdv/ecg-classification) useful repo.
+
+## License
+
+This project is licensed under the [MIT](LICENCE) License (following references)
+
+## Notes
+
+`Dockerfile` is kept outside the project folder (*src*) for a production oriented-view where data, models, UI and other components interact. 
