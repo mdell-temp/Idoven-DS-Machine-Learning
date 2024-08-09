@@ -7,7 +7,7 @@ import pandas as pd
 import seaborn as sns
 from matplotlib.ticker import PercentFormatter
 
-DST_DIR = Path(__file__).parent.parent.joinpath('images')
+DST_DIR = Path(__file__).parent.parent.joinpath('experiments/EDA/images')
 CHANNELS_NAME = ['I', 'II', 'III', 'AVR', 'AVL', 'AVF', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6']
 SAMPLING_RATE = 100
 
