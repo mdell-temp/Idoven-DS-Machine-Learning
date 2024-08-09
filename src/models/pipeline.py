@@ -46,7 +46,7 @@ class Pipeline():
         # check if GPU is available
         self.use_cuda = torch.cuda.is_available()
         logger.info(f"GPU available: {self.use_cuda}")
-        # log_resources(logger)
+        log_resources(logger)
         self.device = torch.device("cuda:0" if self.use_cuda else "cpu")
         if self.use_cuda:
             torch.backends.cudnn.deterministic = True
@@ -144,6 +144,8 @@ class Pipeline():
                     loss = loss_fn(output, target.to(self.device))
 
                 train_loss += loss
+                # if epoch%5==0 or epoch == 0:
+                #     log_resources(logger)
 
                 if half_precision:
                     scaler.scale(loss).backward()
@@ -173,7 +175,6 @@ class Pipeline():
 
                     val_loss += loss_fn(output, target.to(self.device))
                 val_loss /= len(val_loader.dataset)
-                log_resources(logger)
             else:
                 val_step_counter += 1
             val_end = time.time()
