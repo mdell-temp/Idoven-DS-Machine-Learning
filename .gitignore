@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyo
+
+# Jupyter Notebook checkpoint files
+.ipynb_checkpoints/
+
+# Data folder containing data ignored for git
+data/
+
+# include src/data/ sonatining code
+!src/data/
+
+# Data folder containing data ignored for git
+
+#experiments
+# do not store the content
+src/experiments/* 
+# just empty folder for repo structure
+!src/experiments/
+
