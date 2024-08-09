@@ -16,7 +16,8 @@ from sklearn.metrics import (accuracy_score, classification_report, f1_score, ha
 
 from data import dataset
 from evaluation import visualize as mlplots
-from utils.utilities import EarlyStopping, balance_input, setup_logging
+from utils.utilities import EarlyStopping, balance_input
+from utils.logger import setup_logging, log_resources
 
 class Pipeline():
 
@@ -36,7 +37,7 @@ class Pipeline():
         if results_dir:
             self.dst_dir =  Path(f"{results_dir}")
         else:
-            self.dst_dir = Path(f"results/{date}/{hour}_{self.model.model_name}")
+            self.dst_dir = Path(f"experiments/results/{date}/{hour}_{self.model.model_name}")
             if not self.dst_dir.exists():
                 self.dst_dir.mkdir(parents=True, exist_ok=True)
 
@@ -45,6 +46,7 @@ class Pipeline():
         # check if GPU is available
         self.use_cuda = torch.cuda.is_available()
         logger.info(f"GPU available: {self.use_cuda}")
+        # log_resources(logger)
         self.device = torch.device("cuda:0" if self.use_cuda else "cpu")
         if self.use_cuda:
             torch.backends.cudnn.deterministic = True
@@ -171,6 +173,7 @@ class Pipeline():
 
                     val_loss += loss_fn(output, target.to(self.device))
                 val_loss /= len(val_loader.dataset)
+                log_resources(logger)
             else:
                 val_step_counter += 1
             val_end = time.time()
