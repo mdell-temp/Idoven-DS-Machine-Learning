@@ -1,0 +1,398 @@
+2024-08-09 11:26:02,418 - root - INFO - Training parameters:
+2024-08-09 11:26:02,419 - root - INFO - Data path: ../data/ptbxl/
+2024-08-09 11:26:02,420 - root - INFO - Filters: [128, 256, 128]
+2024-08-09 11:26:02,420 - root - INFO - Kernel size: [8, 5, 3]
+2024-08-09 11:26:02,420 - root - INFO - Linear layer length: 128
+2024-08-09 11:26:02,421 - root - INFO - Epochs: 50
+2024-08-09 11:26:02,422 - root - INFO - Batch size: 128
+2024-08-09 11:26:02,422 - root - INFO - Learning rate: 0.001
+2024-08-09 11:26:02,431 - root - INFO - Sampling rate: 100
+2024-08-09 11:26:02,432 - root - INFO - Patience: 10
+2024-08-09 11:26:02,432 - root - INFO - Delta stop: 0
+2024-08-09 11:26:02,433 - root - INFO - Validate every: 1
+2024-08-09 11:26:02,433 - root - INFO - Half precision: False
+
+2024-08-09 11:26:02,433 - root - INFO - Loading data...
+2024-08-09 11:27:09,995 - root - INFO - Data loaded.
+2024-08-09 11:27:31,415 - models.pipeline - INFO - Initiating model
+2024-08-09 11:27:33,500 - models.pipeline - INFO - GPU available: True
+2024-08-09 11:27:36,217 - models.pipeline - INFO - CPU Usage: 1.2%
+2024-08-09 11:27:36,218 - models.pipeline - INFO - Memory Usage: 39.4% (Available: 9.35 GB)
+2024-08-09 11:27:36,220 - models.pipeline - INFO - GPU 0 - Usage: 0.00%, Memory Usage: 0.00% (Free: 0.00 GB)
+2024-08-09 11:27:37,972 - models.pipeline - INFO - Model architecture: FullyConvolutionalNetwork
+2024-08-09 11:27:37,973 - models.pipeline - INFO - Number of parameters: 309765
+2024-08-09 11:27:37,974 - models.pipeline - INFO - Training start
+2024-08-09 11:27:50,371 - models.pipeline - INFO - epoch: 1.000000, train_time: 11.428898, train_loss: 0.005051, val_time: 0.365141, val_loss: 0.000258
+2024-08-09 11:27:50,372 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:27:58,381 - models.pipeline - INFO - epoch: 2.000000, train_time: 7.656452, train_loss: 0.004425, val_time: 0.323327, val_loss: 0.000238
+2024-08-09 11:27:58,383 - models.pipeline - INFO - New best score! It was -0.000258 now is -0.000238
+2024-08-09 11:27:58,383 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:28:06,564 - models.pipeline - INFO - epoch: 3.000000, train_time: 7.826665, train_loss: 0.004094, val_time: 0.325107, val_loss: 0.000223
+2024-08-09 11:28:06,565 - models.pipeline - INFO - New best score! It was -0.000238 now is -0.000223
+2024-08-09 11:28:06,566 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:28:14,671 - models.pipeline - INFO - epoch: 4.000000, train_time: 7.752289, train_loss: 0.003780, val_time: 0.330847, val_loss: 0.000203
+2024-08-09 11:28:14,672 - models.pipeline - INFO - New best score! It was -0.000223 now is -0.000203
+2024-08-09 11:28:14,673 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:28:22,783 - models.pipeline - INFO - epoch: 5.000000, train_time: 7.751737, train_loss: 0.003473, val_time: 0.334355, val_loss: 0.000194
+2024-08-09 11:28:22,784 - models.pipeline - INFO - New best score! It was -0.000203 now is -0.000194
+2024-08-09 11:28:22,785 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:28:30,917 - models.pipeline - INFO - epoch: 6.000000, train_time: 7.785522, train_loss: 0.003124, val_time: 0.319618, val_loss: 0.000170
+2024-08-09 11:28:30,918 - models.pipeline - INFO - New best score! It was -0.000194 now is -0.000170
+2024-08-09 11:28:30,918 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:28:39,001 - models.pipeline - INFO - epoch: 7.000000, train_time: 7.734189, train_loss: 0.002780, val_time: 0.319305, val_loss: 0.000152
+2024-08-09 11:28:39,002 - models.pipeline - INFO - New best score! It was -0.000170 now is -0.000152
+2024-08-09 11:28:39,002 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:28:47,240 - models.pipeline - INFO - epoch: 8.000000, train_time: 7.894101, train_loss: 0.002508, val_time: 0.321888, val_loss: 0.000141
+2024-08-09 11:28:47,242 - models.pipeline - INFO - New best score! It was -0.000152 now is -0.000141
+2024-08-09 11:28:47,242 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:28:55,488 - models.pipeline - INFO - epoch: 9.000000, train_time: 7.870458, train_loss: 0.002373, val_time: 0.347045, val_loss: 0.000129
+2024-08-09 11:28:55,489 - models.pipeline - INFO - New best score! It was -0.000141 now is -0.000129
+2024-08-09 11:28:55,489 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:29:03,673 - models.pipeline - INFO - epoch: 10.000000, train_time: 7.840417, train_loss: 0.002300, val_time: 0.317657, val_loss: 0.000136
+2024-08-09 11:29:03,674 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:29:11,906 - models.pipeline - INFO - epoch: 11.000000, train_time: 7.901056, train_loss: 0.002239, val_time: 0.327936, val_loss: 0.000124
+2024-08-09 11:29:11,908 - models.pipeline - INFO - New best score! It was -0.000129 now is -0.000124
+2024-08-09 11:29:11,908 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:29:20,204 - models.pipeline - INFO - epoch: 12.000000, train_time: 7.950282, train_loss: 0.002191, val_time: 0.322254, val_loss: 0.000129
+2024-08-09 11:29:20,205 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:29:28,308 - models.pipeline - INFO - epoch: 13.000000, train_time: 7.779930, train_loss: 0.002152, val_time: 0.321604, val_loss: 0.000126
+2024-08-09 11:29:28,309 - models.pipeline - INFO - EarlyStopping counter: 2/10
+2024-08-09 11:29:36,855 - models.pipeline - INFO - epoch: 14.000000, train_time: 8.170658, train_loss: 0.002110, val_time: 0.372635, val_loss: 0.000126
+2024-08-09 11:29:36,856 - models.pipeline - INFO - EarlyStopping counter: 3/10
+2024-08-09 11:29:45,100 - models.pipeline - INFO - epoch: 15.000000, train_time: 7.916173, train_loss: 0.002079, val_time: 0.324690, val_loss: 0.000127
+2024-08-09 11:29:45,101 - models.pipeline - INFO - EarlyStopping counter: 4/10
+2024-08-09 11:29:53,246 - models.pipeline - INFO - epoch: 16.000000, train_time: 7.825172, train_loss: 0.002043, val_time: 0.316952, val_loss: 0.000128
+2024-08-09 11:29:53,247 - models.pipeline - INFO - EarlyStopping counter: 5/10
+2024-08-09 11:30:01,473 - models.pipeline - INFO - epoch: 17.000000, train_time: 7.886108, train_loss: 0.002010, val_time: 0.337060, val_loss: 0.000127
+2024-08-09 11:30:01,473 - models.pipeline - INFO - EarlyStopping counter: 6/10
+2024-08-09 11:30:09,692 - models.pipeline - INFO - epoch: 18.000000, train_time: 7.889702, train_loss: 0.001987, val_time: 0.326067, val_loss: 0.000123
+2024-08-09 11:30:09,693 - models.pipeline - INFO - New best score! It was -0.000124 now is -0.000123
+2024-08-09 11:30:09,693 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:30:17,909 - models.pipeline - INFO - epoch: 19.000000, train_time: 7.864038, train_loss: 0.001961, val_time: 0.324650, val_loss: 0.000130
+2024-08-09 11:30:17,910 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:30:26,103 - models.pipeline - INFO - epoch: 20.000000, train_time: 7.845654, train_loss: 0.001940, val_time: 0.344495, val_loss: 0.000127
+2024-08-09 11:30:26,104 - models.pipeline - INFO - EarlyStopping counter: 2/10
+2024-08-09 11:30:34,268 - models.pipeline - INFO - epoch: 21.000000, train_time: 7.835253, train_loss: 0.001917, val_time: 0.326095, val_loss: 0.000133
+2024-08-09 11:30:34,269 - models.pipeline - INFO - EarlyStopping counter: 3/10
+2024-08-09 11:30:42,417 - models.pipeline - INFO - epoch: 22.000000, train_time: 7.820150, train_loss: 0.001902, val_time: 0.325406, val_loss: 0.000122
+2024-08-09 11:30:42,419 - models.pipeline - INFO - New best score! It was -0.000123 now is -0.000122
+2024-08-09 11:30:42,419 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:30:50,606 - models.pipeline - INFO - epoch: 23.000000, train_time: 7.830644, train_loss: 0.001852, val_time: 0.328150, val_loss: 0.000128
+2024-08-09 11:30:50,607 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:30:58,800 - models.pipeline - INFO - epoch: 24.000000, train_time: 7.862246, train_loss: 0.001821, val_time: 0.328147, val_loss: 0.000134
+2024-08-09 11:30:58,801 - models.pipeline - INFO - EarlyStopping counter: 2/10
+2024-08-09 11:31:07,130 - models.pipeline - INFO - epoch: 25.000000, train_time: 7.965496, train_loss: 0.001817, val_time: 0.360513, val_loss: 0.000126
+2024-08-09 11:31:07,131 - models.pipeline - INFO - EarlyStopping counter: 3/10
+2024-08-09 11:31:15,970 - models.pipeline - INFO - epoch: 26.000000, train_time: 8.490290, train_loss: 0.001790, val_time: 0.347359, val_loss: 0.000143
+2024-08-09 11:31:15,971 - models.pipeline - INFO - EarlyStopping counter: 4/10
+2024-08-09 11:31:24,611 - models.pipeline - INFO - epoch: 27.000000, train_time: 8.289074, train_loss: 0.001731, val_time: 0.348759, val_loss: 0.000141
+2024-08-09 11:31:24,612 - models.pipeline - INFO - EarlyStopping counter: 5/10
+2024-08-09 11:31:33,424 - models.pipeline - INFO - epoch: 28.000000, train_time: 8.458286, train_loss: 0.001707, val_time: 0.351628, val_loss: 0.000137
+2024-08-09 11:31:33,425 - models.pipeline - INFO - EarlyStopping counter: 6/10
+2024-08-09 11:31:42,413 - models.pipeline - INFO - epoch: 29.000000, train_time: 8.628615, train_loss: 0.001687, val_time: 0.357078, val_loss: 0.000142
+2024-08-09 11:31:42,414 - models.pipeline - INFO - EarlyStopping counter: 7/10
+2024-08-09 11:31:51,276 - models.pipeline - INFO - epoch: 30.000000, train_time: 8.493825, train_loss: 0.001637, val_time: 0.365377, val_loss: 0.000140
+2024-08-09 11:31:51,277 - models.pipeline - INFO - EarlyStopping counter: 8/10
+2024-08-09 11:32:00,027 - models.pipeline - INFO - epoch: 31.000000, train_time: 8.397367, train_loss: 0.001600, val_time: 0.349623, val_loss: 0.000134
+2024-08-09 11:32:00,028 - models.pipeline - INFO - EarlyStopping counter: 9/10
+2024-08-09 11:32:08,899 - models.pipeline - INFO - epoch: 32.000000, train_time: 8.510836, train_loss: 0.001566, val_time: 0.357620, val_loss: 0.000136
+2024-08-09 11:32:08,900 - models.pipeline - INFO - EarlyStopping counter: 10/10
+2024-08-09 11:32:17,835 - models.pipeline - INFO - epoch: 33.000000, train_time: 8.574109, train_loss: 0.001501, val_time: 0.358639, val_loss: 0.000137
+2024-08-09 11:32:18,688 - models.pipeline - INFO - Total training time: 4.46 minutes
+2024-08-09 11:32:20,100 - models.pipeline - INFO - Thresholds: {'CD': np.float32(0.3353703), 'HYP': np.float32(0.18151346), 'MI': np.float32(0.26582694), 'NORM': np.float32(0.31702584), 'STTC': np.float32(0.24326652)}
+2024-08-09 11:32:21,062 - models.pipeline - INFO - Overall Metrics:
+2024-08-09 11:32:21,063 - models.pipeline - INFO - Accuracy: 0.594 (higher is better)
+2024-08-09 11:32:21,064 - models.pipeline - INFO - Precision (Micro): 0.738 (higher is better)
+2024-08-09 11:32:21,065 - models.pipeline - INFO - Precision (Macro): 0.718 (higher is better)
+2024-08-09 11:32:21,065 - models.pipeline - INFO - Precision (Weighted): 0.739 (higher is better)
+2024-08-09 11:32:21,065 - models.pipeline - INFO - Recall (Micro): 0.818 (higher is better)
+2024-08-09 11:32:21,066 - models.pipeline - INFO - Recall (Macro): 0.777 (higher is better)
+2024-08-09 11:32:21,067 - models.pipeline - INFO - Recall (Weighted): 0.818 (higher is better)
+2024-08-09 11:32:21,067 - models.pipeline - INFO - F1-Score (Micro): 0.776 (higher is better)
+2024-08-09 11:32:21,068 - models.pipeline - INFO - F1-Score (Macro): 0.744 (higher is better)
+2024-08-09 11:32:21,068 - models.pipeline - INFO - F1-Score (Weighted): 0.774 (higher is better)
+2024-08-09 11:32:21,069 - models.pipeline - INFO - Hamming Loss: 0.123 (lower is better)
+2024-08-09 11:32:21,069 - models.pipeline - INFO - Jaccard Score: 0.738 (higher is better)
+2024-08-09 11:32:21,070 - models.pipeline - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+          CD       0.79      0.72      0.76       497
+         HYP       0.58      0.62      0.60       271
+          MI       0.76      0.76      0.76       544
+        NORM       0.78      0.95      0.85       957
+        STTC       0.69      0.84      0.76       534
+
+   micro avg       0.74      0.82      0.78      2803
+   macro avg       0.72      0.78      0.74      2803
+weighted avg       0.74      0.82      0.77      2803
+ samples avg       0.78      0.84      0.79      2803
+
+2024-08-09 11:32:21,073 - models.pipeline - INFO - Evaluation starts..
+2024-08-09 11:32:22,861 - models.pipeline - INFO - Thresholds: {'CD': np.float32(0.34295148), 'HYP': np.float32(0.2321903), 'MI': np.float32(0.21643163), 'NORM': np.float32(0.5528035), 'STTC': np.float32(0.31803796)}
+2024-08-09 11:32:23,817 - models.pipeline - INFO - Overall Metrics:
+2024-08-09 11:32:23,819 - models.pipeline - INFO - Accuracy: 0.609 (higher is better)
+2024-08-09 11:32:23,820 - models.pipeline - INFO - Precision (Micro): 0.745 (higher is better)
+2024-08-09 11:32:23,821 - models.pipeline - INFO - Precision (Macro): 0.721 (higher is better)
+2024-08-09 11:32:23,822 - models.pipeline - INFO - Precision (Weighted): 0.747 (higher is better)
+2024-08-09 11:32:23,822 - models.pipeline - INFO - Recall (Micro): 0.807 (higher is better)
+2024-08-09 11:32:23,823 - models.pipeline - INFO - Recall (Macro): 0.775 (higher is better)
+2024-08-09 11:32:23,823 - models.pipeline - INFO - Recall (Weighted): 0.807 (higher is better)
+2024-08-09 11:32:23,824 - models.pipeline - INFO - F1-Score (Micro): 0.775 (higher is better)
+2024-08-09 11:32:23,828 - models.pipeline - INFO - F1-Score (Macro): 0.746 (higher is better)
+2024-08-09 11:32:23,830 - models.pipeline - INFO - F1-Score (Weighted): 0.775 (higher is better)
+2024-08-09 11:32:23,831 - models.pipeline - INFO - Hamming Loss: 0.122 (lower is better)
+2024-08-09 11:32:23,832 - models.pipeline - INFO - Jaccard Score: 0.735 (higher is better)
+2024-08-09 11:32:23,834 - models.pipeline - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+          CD       0.80      0.74      0.77       497
+         HYP       0.57      0.67      0.61       271
+          MI       0.73      0.77      0.75       544
+        NORM       0.80      0.92      0.86       957
+        STTC       0.70      0.78      0.74       534
+
+   micro avg       0.74      0.81      0.77      2803
+   macro avg       0.72      0.78      0.75      2803
+weighted avg       0.75      0.81      0.77      2803
+ samples avg       0.77      0.82      0.77      2803
+
+2024-08-09 11:32:24,804 - data.data_augmentation - INFO - Undersample distribution: {'CD': np.int64(416), 'HYP': np.int64(416), 'MI': np.int64(416), 'NORM': np.int64(416), 'STTC': np.int64(416)}
+2024-08-09 11:32:25,272 - data.dataset - INFO - The training data was augmented. Before we had 17111 samples and now we have 6213
+2024-08-09 11:32:43,506 - models.pipeline - INFO - Initiating model
+2024-08-09 11:32:43,507 - models.pipeline - INFO - GPU available: True
+2024-08-09 11:32:45,170 - models.pipeline - INFO - CPU Usage: 0.0%
+2024-08-09 11:32:45,171 - models.pipeline - INFO - Memory Usage: 48.4% (Available: 7.96 GB)
+2024-08-09 11:32:45,171 - models.pipeline - INFO - GPU 0 - Usage: 0.00%, Memory Usage: 29.38% (Free: 0.00 GB)
+2024-08-09 11:32:45,206 - models.pipeline - INFO - Model architecture: FullyConvolutionalNetwork
+2024-08-09 11:32:45,208 - models.pipeline - INFO - Number of parameters: 309765
+2024-08-09 11:32:45,209 - models.pipeline - INFO - Training start
+2024-08-09 11:32:49,199 - models.pipeline - INFO - epoch: 1.000000, train_time: 3.652026, train_loss: 0.005342, val_time: 0.335568, val_loss: 0.000296
+2024-08-09 11:32:49,200 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:32:52,582 - models.pipeline - INFO - epoch: 2.000000, train_time: 3.017817, train_loss: 0.004817, val_time: 0.338818, val_loss: 0.000273
+2024-08-09 11:32:52,583 - models.pipeline - INFO - New best score! It was -0.000296 now is -0.000273
+2024-08-09 11:32:52,583 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:32:56,053 - models.pipeline - INFO - epoch: 3.000000, train_time: 3.111680, train_loss: 0.004516, val_time: 0.333519, val_loss: 0.000256
+2024-08-09 11:32:56,053 - models.pipeline - INFO - New best score! It was -0.000273 now is -0.000256
+2024-08-09 11:32:56,054 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:32:59,598 - models.pipeline - INFO - epoch: 4.000000, train_time: 3.134923, train_loss: 0.004277, val_time: 0.377018, val_loss: 0.000244
+2024-08-09 11:32:59,599 - models.pipeline - INFO - New best score! It was -0.000256 now is -0.000244
+2024-08-09 11:32:59,600 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:33:03,100 - models.pipeline - INFO - epoch: 5.000000, train_time: 3.121505, train_loss: 0.004042, val_time: 0.341613, val_loss: 0.000226
+2024-08-09 11:33:03,101 - models.pipeline - INFO - New best score! It was -0.000244 now is -0.000226
+2024-08-09 11:33:03,102 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:33:07,047 - models.pipeline - INFO - epoch: 6.000000, train_time: 3.507807, train_loss: 0.003887, val_time: 0.414277, val_loss: 0.000236
+2024-08-09 11:33:07,048 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:33:10,811 - models.pipeline - INFO - epoch: 7.000000, train_time: 3.406390, train_loss: 0.003753, val_time: 0.355105, val_loss: 0.000214
+2024-08-09 11:33:10,812 - models.pipeline - INFO - New best score! It was -0.000226 now is -0.000214
+2024-08-09 11:33:10,812 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:33:14,292 - models.pipeline - INFO - epoch: 8.000000, train_time: 3.089996, train_loss: 0.003593, val_time: 0.360614, val_loss: 0.000217
+2024-08-09 11:33:14,293 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:33:17,765 - models.pipeline - INFO - epoch: 9.000000, train_time: 3.137083, train_loss: 0.003416, val_time: 0.333802, val_loss: 0.000206
+2024-08-09 11:33:17,766 - models.pipeline - INFO - New best score! It was -0.000214 now is -0.000206
+2024-08-09 11:33:17,767 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:33:21,227 - models.pipeline - INFO - epoch: 10.000000, train_time: 3.093511, train_loss: 0.003293, val_time: 0.341105, val_loss: 0.000192
+2024-08-09 11:33:21,228 - models.pipeline - INFO - New best score! It was -0.000206 now is -0.000192
+2024-08-09 11:33:21,229 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:33:24,796 - models.pipeline - INFO - epoch: 11.000000, train_time: 3.185588, train_loss: 0.003164, val_time: 0.349849, val_loss: 0.000205
+2024-08-09 11:33:24,797 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:33:28,322 - models.pipeline - INFO - epoch: 12.000000, train_time: 3.189244, train_loss: 0.003018, val_time: 0.334014, val_loss: 0.000204
+2024-08-09 11:33:28,323 - models.pipeline - INFO - EarlyStopping counter: 2/10
+2024-08-09 11:33:31,704 - models.pipeline - INFO - epoch: 13.000000, train_time: 3.035956, train_loss: 0.002934, val_time: 0.343170, val_loss: 0.000211
+2024-08-09 11:33:31,705 - models.pipeline - INFO - EarlyStopping counter: 3/10
+2024-08-09 11:33:35,264 - models.pipeline - INFO - epoch: 14.000000, train_time: 3.211346, train_loss: 0.002846, val_time: 0.345026, val_loss: 0.000183
+2024-08-09 11:33:35,265 - models.pipeline - INFO - New best score! It was -0.000192 now is -0.000183
+2024-08-09 11:33:35,266 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:33:38,751 - models.pipeline - INFO - epoch: 15.000000, train_time: 3.095978, train_loss: 0.002781, val_time: 0.355279, val_loss: 0.000200
+2024-08-09 11:33:38,752 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:33:42,203 - models.pipeline - INFO - epoch: 16.000000, train_time: 3.103750, train_loss: 0.002752, val_time: 0.345968, val_loss: 0.000220
+2024-08-09 11:33:42,204 - models.pipeline - INFO - EarlyStopping counter: 2/10
+2024-08-09 11:33:45,631 - models.pipeline - INFO - epoch: 17.000000, train_time: 3.081459, train_loss: 0.002682, val_time: 0.343305, val_loss: 0.000199
+2024-08-09 11:33:45,632 - models.pipeline - INFO - EarlyStopping counter: 3/10
+2024-08-09 11:33:49,047 - models.pipeline - INFO - epoch: 18.000000, train_time: 3.057961, train_loss: 0.002643, val_time: 0.355810, val_loss: 0.000193
+2024-08-09 11:33:49,048 - models.pipeline - INFO - EarlyStopping counter: 4/10
+2024-08-09 11:33:52,625 - models.pipeline - INFO - epoch: 19.000000, train_time: 3.179309, train_loss: 0.002585, val_time: 0.396674, val_loss: 0.000221
+2024-08-09 11:33:52,626 - models.pipeline - INFO - EarlyStopping counter: 5/10
+2024-08-09 11:33:56,123 - models.pipeline - INFO - epoch: 20.000000, train_time: 3.140455, train_loss: 0.002535, val_time: 0.355274, val_loss: 0.000225
+2024-08-09 11:33:56,125 - models.pipeline - INFO - EarlyStopping counter: 6/10
+2024-08-09 11:33:59,605 - models.pipeline - INFO - epoch: 21.000000, train_time: 3.138762, train_loss: 0.002499, val_time: 0.340082, val_loss: 0.000205
+2024-08-09 11:33:59,606 - models.pipeline - INFO - EarlyStopping counter: 7/10
+2024-08-09 11:34:03,120 - models.pipeline - INFO - epoch: 22.000000, train_time: 3.160182, train_loss: 0.002429, val_time: 0.352732, val_loss: 0.000216
+2024-08-09 11:34:03,121 - models.pipeline - INFO - EarlyStopping counter: 8/10
+2024-08-09 11:34:06,557 - models.pipeline - INFO - epoch: 23.000000, train_time: 3.091166, train_loss: 0.002362, val_time: 0.343703, val_loss: 0.000236
+2024-08-09 11:34:06,558 - models.pipeline - INFO - EarlyStopping counter: 9/10
+2024-08-09 11:34:09,978 - models.pipeline - INFO - epoch: 24.000000, train_time: 3.068989, train_loss: 0.002373, val_time: 0.349395, val_loss: 0.000216
+2024-08-09 11:34:09,979 - models.pipeline - INFO - EarlyStopping counter: 10/10
+2024-08-09 11:34:13,503 - models.pipeline - INFO - epoch: 25.000000, train_time: 3.175002, train_loss: 0.002329, val_time: 0.347540, val_loss: 0.000226
+2024-08-09 11:34:14,222 - models.pipeline - INFO - Total training time: 1.32 minutes
+2024-08-09 11:34:15,592 - models.pipeline - INFO - Thresholds: {'CD': np.float32(0.78447354), 'HYP': np.float32(0.78730196), 'MI': np.float32(0.21266553), 'NORM': np.float32(0.06367551), 'STTC': np.float32(0.5334053)}
+2024-08-09 11:34:16,524 - models.pipeline - INFO - Overall Metrics:
+2024-08-09 11:34:16,524 - models.pipeline - INFO - Accuracy: 0.526 (higher is better)
+2024-08-09 11:34:16,525 - models.pipeline - INFO - Precision (Micro): 0.702 (higher is better)
+2024-08-09 11:34:16,526 - models.pipeline - INFO - Precision (Macro): 0.677 (higher is better)
+2024-08-09 11:34:16,528 - models.pipeline - INFO - Precision (Weighted): 0.707 (higher is better)
+2024-08-09 11:34:16,532 - models.pipeline - INFO - Recall (Micro): 0.799 (higher is better)
+2024-08-09 11:34:16,533 - models.pipeline - INFO - Recall (Macro): 0.767 (higher is better)
+2024-08-09 11:34:16,534 - models.pipeline - INFO - Recall (Weighted): 0.799 (higher is better)
+2024-08-09 11:34:16,535 - models.pipeline - INFO - F1-Score (Micro): 0.747 (higher is better)
+2024-08-09 11:34:16,536 - models.pipeline - INFO - F1-Score (Macro): 0.717 (higher is better)
+2024-08-09 11:34:16,537 - models.pipeline - INFO - F1-Score (Weighted): 0.748 (higher is better)
+2024-08-09 11:34:16,537 - models.pipeline - INFO - Hamming Loss: 0.140 (lower is better)
+2024-08-09 11:34:16,538 - models.pipeline - INFO - Jaccard Score: 0.697 (higher is better)
+2024-08-09 11:34:16,539 - models.pipeline - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+          CD       0.75      0.69      0.72       497
+         HYP       0.53      0.64      0.58       271
+          MI       0.66      0.80      0.72       544
+        NORM       0.79      0.89      0.84       957
+        STTC       0.65      0.82      0.73       534
+
+   micro avg       0.70      0.80      0.75      2803
+   macro avg       0.68      0.77      0.72      2803
+weighted avg       0.71      0.80      0.75      2803
+ samples avg       0.74      0.82      0.75      2803
+
+2024-08-09 11:34:16,541 - models.pipeline - INFO - Evaluation starts..
+2024-08-09 11:34:18,399 - models.pipeline - INFO - Thresholds: {'CD': np.float32(0.6501302), 'HYP': np.float32(0.74732685), 'MI': np.float32(0.23405568), 'NORM': np.float32(0.23761548), 'STTC': np.float32(0.43723482)}
+2024-08-09 11:34:19,357 - models.pipeline - INFO - Overall Metrics:
+2024-08-09 11:34:19,358 - models.pipeline - INFO - Accuracy: 0.521 (higher is better)
+2024-08-09 11:34:19,359 - models.pipeline - INFO - Precision (Micro): 0.711 (higher is better)
+2024-08-09 11:34:19,360 - models.pipeline - INFO - Precision (Macro): 0.688 (higher is better)
+2024-08-09 11:34:19,361 - models.pipeline - INFO - Precision (Weighted): 0.710 (higher is better)
+2024-08-09 11:34:19,363 - models.pipeline - INFO - Recall (Micro): 0.788 (higher is better)
+2024-08-09 11:34:19,365 - models.pipeline - INFO - Recall (Macro): 0.747 (higher is better)
+2024-08-09 11:34:19,366 - models.pipeline - INFO - Recall (Weighted): 0.788 (higher is better)
+2024-08-09 11:34:19,366 - models.pipeline - INFO - F1-Score (Micro): 0.748 (higher is better)
+2024-08-09 11:34:19,367 - models.pipeline - INFO - F1-Score (Macro): 0.715 (higher is better)
+2024-08-09 11:34:19,368 - models.pipeline - INFO - F1-Score (Weighted): 0.745 (higher is better)
+2024-08-09 11:34:19,369 - models.pipeline - INFO - Hamming Loss: 0.138 (lower is better)
+2024-08-09 11:34:19,371 - models.pipeline - INFO - Jaccard Score: 0.691 (higher is better)
+2024-08-09 11:34:19,372 - models.pipeline - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+          CD       0.73      0.70      0.71       497
+         HYP       0.58      0.59      0.58       271
+          MI       0.70      0.73      0.71       544
+        NORM       0.77      0.91      0.83       957
+        STTC       0.67      0.81      0.73       534
+
+   micro avg       0.71      0.79      0.75      2803
+   macro avg       0.69      0.75      0.71      2803
+weighted avg       0.71      0.79      0.75      2803
+ samples avg       0.73      0.81      0.75      2803
+
+2024-08-09 11:34:29,473 - data.data_augmentation - INFO - Oversample distribution: {'CD': np.int64(7254), 'HYP': np.int64(7254), 'MI': np.int64(7254), 'NORM': np.int64(7254), 'STTC': np.int64(7254)}
+2024-08-09 11:34:38,102 - data.dataset - INFO - The training data was augmented. Before we had 17111 samples and now we have 40403
+2024-08-09 11:35:26,937 - models.pipeline - INFO - Initiating model
+2024-08-09 11:35:26,938 - models.pipeline - INFO - GPU available: True
+2024-08-09 11:35:28,758 - models.pipeline - INFO - CPU Usage: 0.0%
+2024-08-09 11:35:28,759 - models.pipeline - INFO - Memory Usage: 60.4% (Available: 6.12 GB)
+2024-08-09 11:35:28,759 - models.pipeline - INFO - GPU 0 - Usage: 0.00%, Memory Usage: 29.38% (Free: 0.00 GB)
+2024-08-09 11:35:28,829 - models.pipeline - INFO - Model architecture: FullyConvolutionalNetwork
+2024-08-09 11:35:28,830 - models.pipeline - INFO - Number of parameters: 309765
+2024-08-09 11:35:28,833 - models.pipeline - INFO - Training start
+2024-08-09 11:35:50,103 - models.pipeline - INFO - epoch: 1.000000, train_time: 20.863803, train_loss: 0.004788, val_time: 0.393233, val_loss: 0.000247
+2024-08-09 11:35:50,105 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:36:10,746 - models.pipeline - INFO - epoch: 2.000000, train_time: 20.247578, train_loss: 0.004120, val_time: 0.362683, val_loss: 0.000225
+2024-08-09 11:36:10,757 - models.pipeline - INFO - New best score! It was -0.000247 now is -0.000225
+2024-08-09 11:36:10,758 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:36:31,436 - models.pipeline - INFO - epoch: 3.000000, train_time: 20.286119, train_loss: 0.003624, val_time: 0.353545, val_loss: 0.000204
+2024-08-09 11:36:31,438 - models.pipeline - INFO - New best score! It was -0.000225 now is -0.000204
+2024-08-09 11:36:31,438 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:36:52,027 - models.pipeline - INFO - epoch: 4.000000, train_time: 20.187388, train_loss: 0.003076, val_time: 0.364070, val_loss: 0.000180
+2024-08-09 11:36:52,028 - models.pipeline - INFO - New best score! It was -0.000204 now is -0.000180
+2024-08-09 11:36:52,028 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:37:12,575 - models.pipeline - INFO - epoch: 5.000000, train_time: 20.137948, train_loss: 0.002503, val_time: 0.375752, val_loss: 0.000167
+2024-08-09 11:37:12,577 - models.pipeline - INFO - New best score! It was -0.000180 now is -0.000167
+2024-08-09 11:37:12,577 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:37:33,709 - models.pipeline - INFO - epoch: 6.000000, train_time: 20.704217, train_loss: 0.002148, val_time: 0.398597, val_loss: 0.000157
+2024-08-09 11:37:33,710 - models.pipeline - INFO - New best score! It was -0.000167 now is -0.000157
+2024-08-09 11:37:33,711 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:37:54,551 - models.pipeline - INFO - epoch: 7.000000, train_time: 20.446758, train_loss: 0.001980, val_time: 0.360469, val_loss: 0.000151
+2024-08-09 11:37:54,552 - models.pipeline - INFO - New best score! It was -0.000157 now is -0.000151
+2024-08-09 11:37:54,553 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:38:15,557 - models.pipeline - INFO - epoch: 8.000000, train_time: 20.603824, train_loss: 0.001870, val_time: 0.365757, val_loss: 0.000163
+2024-08-09 11:38:15,558 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:38:36,625 - models.pipeline - INFO - epoch: 9.000000, train_time: 20.694536, train_loss: 0.001787, val_time: 0.367664, val_loss: 0.000148
+2024-08-09 11:38:36,626 - models.pipeline - INFO - New best score! It was -0.000151 now is -0.000148
+2024-08-09 11:38:36,626 - models.pipeline - INFO - Reset counter and saving model...
+2024-08-09 11:38:57,919 - models.pipeline - INFO - epoch: 10.000000, train_time: 20.898391, train_loss: 0.001690, val_time: 0.358570, val_loss: 0.000155
+2024-08-09 11:38:57,920 - models.pipeline - INFO - EarlyStopping counter: 1/10
+2024-08-09 11:39:20,290 - models.pipeline - INFO - epoch: 11.000000, train_time: 21.982083, train_loss: 0.001622, val_time: 0.382872, val_loss: 0.000149
+2024-08-09 11:39:20,291 - models.pipeline - INFO - EarlyStopping counter: 2/10
+2024-08-09 11:39:42,914 - models.pipeline - INFO - epoch: 12.000000, train_time: 22.247737, train_loss: 0.001559, val_time: 0.368545, val_loss: 0.000169
+2024-08-09 11:39:42,915 - models.pipeline - INFO - EarlyStopping counter: 3/10
+2024-08-09 11:40:05,668 - models.pipeline - INFO - epoch: 13.000000, train_time: 22.339669, train_loss: 0.001503, val_time: 0.407605, val_loss: 0.000181
+2024-08-09 11:40:05,669 - models.pipeline - INFO - EarlyStopping counter: 4/10
+2024-08-09 11:40:28,633 - models.pipeline - INFO - epoch: 14.000000, train_time: 22.565731, train_loss: 0.001440, val_time: 0.392478, val_loss: 0.000170
+2024-08-09 11:40:28,634 - models.pipeline - INFO - EarlyStopping counter: 5/10
+2024-08-09 11:40:51,105 - models.pipeline - INFO - epoch: 15.000000, train_time: 22.081628, train_loss: 0.001387, val_time: 0.384092, val_loss: 0.000155
+2024-08-09 11:40:51,106 - models.pipeline - INFO - EarlyStopping counter: 6/10
+2024-08-09 11:41:13,860 - models.pipeline - INFO - epoch: 16.000000, train_time: 22.376605, train_loss: 0.001327, val_time: 0.373185, val_loss: 0.000164
+2024-08-09 11:41:13,861 - models.pipeline - INFO - EarlyStopping counter: 7/10
+2024-08-09 11:41:36,993 - models.pipeline - INFO - epoch: 17.000000, train_time: 22.728597, train_loss: 0.001272, val_time: 0.398418, val_loss: 0.000177
+2024-08-09 11:41:36,994 - models.pipeline - INFO - EarlyStopping counter: 8/10
+2024-08-09 11:41:59,455 - models.pipeline - INFO - epoch: 18.000000, train_time: 22.072123, train_loss: 0.001221, val_time: 0.383838, val_loss: 0.000183
+2024-08-09 11:41:59,456 - models.pipeline - INFO - EarlyStopping counter: 9/10
+2024-08-09 11:42:22,134 - models.pipeline - INFO - epoch: 19.000000, train_time: 22.219942, train_loss: 0.001189, val_time: 0.451955, val_loss: 0.000261
+2024-08-09 11:42:22,136 - models.pipeline - INFO - EarlyStopping counter: 10/10
+2024-08-09 11:42:44,961 - models.pipeline - INFO - epoch: 20.000000, train_time: 22.415887, train_loss: 0.001134, val_time: 0.403588, val_loss: 0.000192
+2024-08-09 11:42:45,688 - models.pipeline - INFO - Total training time: 7.14 minutes
+2024-08-09 11:42:47,005 - models.pipeline - INFO - Thresholds: {'CD': np.float32(0.17802478), 'HYP': np.float32(0.48614067), 'MI': np.float32(0.064419), 'NORM': np.float32(0.1925625), 'STTC': np.float32(0.1900777)}
+2024-08-09 11:42:47,986 - models.pipeline - INFO - Overall Metrics:
+2024-08-09 11:42:47,987 - models.pipeline - INFO - Accuracy: 0.530 (higher is better)
+2024-08-09 11:42:47,988 - models.pipeline - INFO - Precision (Micro): 0.702 (higher is better)
+2024-08-09 11:42:47,989 - models.pipeline - INFO - Precision (Macro): 0.675 (higher is better)
+2024-08-09 11:42:47,991 - models.pipeline - INFO - Precision (Weighted): 0.706 (higher is better)
+2024-08-09 11:42:47,994 - models.pipeline - INFO - Recall (Micro): 0.796 (higher is better)
+2024-08-09 11:42:47,995 - models.pipeline - INFO - Recall (Macro): 0.765 (higher is better)
+2024-08-09 11:42:47,996 - models.pipeline - INFO - Recall (Weighted): 0.796 (higher is better)
+2024-08-09 11:42:47,996 - models.pipeline - INFO - F1-Score (Micro): 0.746 (higher is better)
+2024-08-09 11:42:47,997 - models.pipeline - INFO - F1-Score (Macro): 0.716 (higher is better)
+2024-08-09 11:42:47,997 - models.pipeline - INFO - F1-Score (Weighted): 0.747 (higher is better)
+2024-08-09 11:42:47,998 - models.pipeline - INFO - Hamming Loss: 0.141 (lower is better)
+2024-08-09 11:42:47,999 - models.pipeline - INFO - Jaccard Score: 0.699 (higher is better)
+2024-08-09 11:42:48,000 - models.pipeline - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+          CD       0.77      0.74      0.75       497
+         HYP       0.50      0.64      0.56       271
+          MI       0.67      0.80      0.73       544
+        NORM       0.78      0.89      0.83       957
+        STTC       0.66      0.76      0.70       534
+
+   micro avg       0.70      0.80      0.75      2803
+   macro avg       0.68      0.76      0.72      2803
+weighted avg       0.71      0.80      0.75      2803
+ samples avg       0.75      0.81      0.75      2803
+
+2024-08-09 11:42:48,006 - models.pipeline - INFO - Evaluation starts..
+2024-08-09 11:42:49,922 - models.pipeline - INFO - Thresholds: {'CD': np.float32(0.48924154), 'HYP': np.float32(0.19695584), 'MI': np.float32(0.10459005), 'NORM': np.float32(0.18560635), 'STTC': np.float32(0.40663975)}
+2024-08-09 11:42:50,918 - models.pipeline - INFO - Overall Metrics:
+2024-08-09 11:42:50,919 - models.pipeline - INFO - Accuracy: 0.530 (higher is better)
+2024-08-09 11:42:50,919 - models.pipeline - INFO - Precision (Micro): 0.711 (higher is better)
+2024-08-09 11:42:50,919 - models.pipeline - INFO - Precision (Macro): 0.688 (higher is better)
+2024-08-09 11:42:50,920 - models.pipeline - INFO - Precision (Weighted): 0.723 (higher is better)
+2024-08-09 11:42:50,920 - models.pipeline - INFO - Recall (Micro): 0.781 (higher is better)
+2024-08-09 11:42:50,920 - models.pipeline - INFO - Recall (Macro): 0.747 (higher is better)
+2024-08-09 11:42:50,920 - models.pipeline - INFO - Recall (Weighted): 0.781 (higher is better)
+2024-08-09 11:42:50,921 - models.pipeline - INFO - F1-Score (Micro): 0.745 (higher is better)
+2024-08-09 11:42:50,921 - models.pipeline - INFO - F1-Score (Macro): 0.710 (higher is better)
+2024-08-09 11:42:50,921 - models.pipeline - INFO - F1-Score (Weighted): 0.746 (higher is better)
+2024-08-09 11:42:50,922 - models.pipeline - INFO - Hamming Loss: 0.139 (lower is better)
+2024-08-09 11:42:50,922 - models.pipeline - INFO - Jaccard Score: 0.700 (higher is better)
+2024-08-09 11:42:50,922 - models.pipeline - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+          CD       0.82      0.63      0.71       497
+         HYP       0.48      0.65      0.55       271
+          MI       0.69      0.75      0.72       544
+        NORM       0.80      0.90      0.85       957
+        STTC       0.65      0.80      0.72       534
+
+   micro avg       0.71      0.78      0.74      2803
+   macro avg       0.69      0.75      0.71      2803
+weighted avg       0.72      0.78      0.75      2803
+ samples avg       0.75      0.81      0.76      2803
+
+2024-08-09 11:42:50,922 - root - INFO - Script compiled successfully. Closing.
