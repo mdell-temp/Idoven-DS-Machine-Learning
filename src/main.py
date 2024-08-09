@@ -91,4 +91,6 @@ if __name__ == "__main__":
                    patience=args.patience,  
                    delta_stop=args.delta_stop,  
                    val_every=args.val_every,  
-                   half_precision=args.half_precision)  
+                   half_precision=args.half_precision)
+
+        pipe.evaluate(test_ds = test_ds, batch_size = args.batch_size)
