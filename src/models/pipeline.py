@@ -235,7 +235,7 @@ class Pipeline():
             test_ds (ECGDataset): The test dataset to evaluate the model on.
             batch_size (int): The number of samples per batch to load.
         """
-        
+        logger.info("Evaluation starts..")
         test_loader = dataset.make_dataloader(ds=test_ds, batch_size=batch_size)
 
         test_start = time.time()

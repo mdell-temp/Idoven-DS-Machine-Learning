@@ -94,3 +94,5 @@ if __name__ == "__main__":
                    half_precision=args.half_precision)
 
         pipe.evaluate(test_ds = test_ds, batch_size = args.batch_size)
+    
+    logger.info("Script compiled successfully. Closing.")
