@@ -109,10 +109,14 @@ Run the Docker:
 
     - Open and run the `assignment.ipynb` to see the proposed solution and perform EDA, train ML models and evaluate the trained models.
 
-    - Run the pipeline from command line (check the accepted arguments) 
-    ```python 
-    python main.py [OPTIONS]
-    ```
-
+    - Run the pipeline from command line: 
+        ```python 
+        python main.py [OPTIONS]
+        ```
+        
+        check the accepted arguments by running:
+        ```python 
+        python main.py --help
+        ```
 
 
