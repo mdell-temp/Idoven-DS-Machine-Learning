@@ -43,8 +43,7 @@ class ECGDataset(Dataset):
                                                                                  add_multi=True)
             new_size = train_signal_clean.shape[0]
 
-            print(train_signal_clean.shape, type(train_signal_clean))
-            print(len(train_labels_filtered), type(train_labels_filtered))
+            
             logger.info(
                 f"The training data was augmented. Before we had {init_size} samples and now we have {new_size}")
 
