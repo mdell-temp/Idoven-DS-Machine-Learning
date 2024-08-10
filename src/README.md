@@ -21,6 +21,7 @@ Here's the structure of the repository:
 ├── data # folder with ECG data
 │   ├── download_data.sh
 │   └── README.md
+│   │
 ├── src # folder with proposed approach
 │   │
 │   ├── data # folder with dataloading and processing modules
