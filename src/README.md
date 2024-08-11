@@ -110,7 +110,7 @@ Run the Docker:
 
     - Open and run the `assignment.ipynb` to see the proposed solution and perform EDA, train ML models and evaluate the trained models.
 
-    - Run the pipeline from command line: 
+    - Run the pipeline for training and evaluation with normal, undersampled and oversampled data from the command line: 
         ```python 
         python main.py [OPTIONS]
         ```
