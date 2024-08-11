@@ -1,13 +1,13 @@
 # Machine Learning Task - Proposed approach
 
 ### Candidate
--
+- Mattia Delleani 
 
 ## Introduction
 
-Welcome to this project! Here, we focus on implementing a machine learning (ML) classification model from scratch using the provided data. The objective is to explore the problem, assess reasonable and interesting approaches within the given time constraints, and make design decisions accordingly. This repository will guide you through the entire process, from reading and analyzing ECG files to visualizing the signals and building a model that can provide actionable insights.
+Welcome to this project focused on implementing a machine learning (ML) classification model from scratch using the provided ECG data. The objective is to explore the problem, assess reasonable and interesting approaches within the given time constraints, and make design decisions accordingly. This repository will guide you through the entire process, from reading and analyzing ECG files to visualizing the signals and building a model that can provide actionable insights about classification.
 
-At Idoven, data scientists work with anonymized patient data to:
+Here below the main points addressed as required by the challenge:
 1. Read ECG files and their corresponding annotations.
 2. Process and visualize the signals in a manner that doctors can interpret.
 3. Build models to classify and analyze the signals.
@@ -21,6 +21,7 @@ Here's the structure of the repository:
 ├── data # folder with ECG data
 │   ├── download_data.sh
 │   └── README.md
+│   │
 ├── src # folder with proposed approach
 │   │
 │   ├── data # folder with dataloading and processing modules
@@ -55,12 +56,12 @@ Here's the structure of the repository:
 └── README.md
 ```
 
-**Structure Rationale**
+**Structure**
 
 The structure is designed for simplicity and clarity, aligning with the assignment requirements. It provides a logical flow from data processing through model evaluation, making it easy to follow and reproduce the steps taken. By organizing code into distinct modules and separating experiments, the structure enhances readability and maintainability, ensuring that the focus remains on answering the assignment questions effectively.
 
-Main component:
-- `assignment.ipynb`: The Jupyter Notebook containing the answers to the assignment, structured into sections for EDA, ML classification, and a conclusion with references, providing a comprehensive response to the task.
+**Main component**:
+- `assignment.ipynb`: The Jupyter Notebook, as requested, containing the answers to the assignment, structured into sections for EDA, ML classification, and a conclusion section to provide a comprehensive response to the task with references. 
 
 ## Getting Started
 
@@ -102,14 +103,14 @@ Run the Docker:
     # or
     docker run --gpus=all -p 8888:8888 -v %cd%\src:/app/src ecg-classification # GPU
     ```
-    This will start a Docker container and expose port 8888. You can access Jupyter Lab session by navigating to http://localhost:8888 in your web browser.
+    This will start a Docker container and expose port 8888. You can access Jupyter Lab session by navigating to http://localhost:8888 in your web browser, copy paste the token.
 
 
 3. Navigate through the project:
 
     - Open and run the `assignment.ipynb` to see the proposed solution and perform EDA, train ML models and evaluate the trained models.
 
-    - Run the pipeline from command line: 
+    - Run the pipeline for training and evaluation with normal, undersampled and oversampled data from the command line: 
         ```python 
         python main.py [OPTIONS]
         ```
@@ -126,10 +127,13 @@ Run the Docker:
 - **Implement MLflow, Neptune, or W&B** for interactive experiment tracking.
 - **Add test (pyunit, pytest) for continuous integration** to ensure code quality and reliability.
 - **Develop a comprehensive benchmarking setup** for comparing multiple models effectively.
-- **Document functions in the code** with descriptions of their libraries, arguments, and return values.
+- **Document functions in the code** with descriptions of their libraries, arguments, and returned values.
 
 
 ## References
+
+As you may expect, I did not make all this with my own hands, but I took my cue from these:
+
 - [PhysioNet PTB-XL Database](https://physionet.org/content/ptb-xl/1.0.2/) for foundational knowledge and dataset details.
 - [GitHub Repository by Roios](https://github.com/Roios/ptb_ecg_classification/tree/main) for implementation insights and practical approaches.
 - [Automated ECG Interpretation Repository](https://github.com/AutoECG/Automated-ECG-Interpretation) for advanced modeling techniques and benchmarks.
