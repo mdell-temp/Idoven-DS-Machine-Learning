@@ -7,6 +7,20 @@
 
 In response to the feedback, I have reorganized the project structure and created a new folder named `scratch`, containing the notebook called `assigment_revised.ipynb`.
 
+## Main components
+
+- Open and run the `assignment.ipynb` to see the proposed solution and perform EDA, train ML models and evaluate the trained models.
+
+- Run the pipeline for training and evaluation with normal, undersampled and oversampled data from the command line: 
+    ```python 
+    python main.py [OPTIONS]
+    ```
+
+    check the accepted arguments by running:
+    ```python 
+    python main.py --help
+    ```
+
 **Structure**:
 
 ```plaintext
