@@ -9,9 +9,9 @@ In response to the feedback, I have reorganized the project structure and create
 
 ## Main components
 
-- Open and run the `assignment.ipynb` to see the proposed solution and perform EDA, train ML models and evaluate the trained models.
+- Open and run the `assignment_revised.ipynb` to see the proposed revised solution.
 
-- Run the pipeline for training and evaluation with normal, undersampled and oversampled data from the command line: 
+- Run the pipeline for training and evaluation: 
     ```python 
     python main.py [OPTIONS]
     ```
