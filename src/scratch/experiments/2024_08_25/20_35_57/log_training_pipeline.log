@@ -1,0 +1,92 @@
+2024-08-25 20:35:57,245 - root - INFO - Loading data...
+2024-08-25 20:36:51,541 - root - INFO - Data successfully loaded!
+
+2024-08-25 20:36:52,698 - root - INFO - Preprocessing data...
+2024-08-25 20:37:00,721 - root - INFO - Data successfully processed!
+
+2024-08-25 20:37:00,723 - root - INFO - Splitting data...
+2024-08-25 20:37:00,725 - root - INFO - Train, val and test split successfully!
+
+2024-08-25 20:37:10,783 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-08-25 20:37:10,792 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-08-25 20:37:14,998 - root - INFO - Starting training...
+2024-08-25 20:37:28,695 - root - INFO - Epoch 1/2, Train Loss: 0.0034, Val Loss: 0.0028, LR: 0.000069
+2024-08-25 20:37:28,697 - root - INFO - Validation: Accuracy: 0.4926, Precision: 0.7559, Recall: 0.4925, F1-Score: 0.5734
+2024-08-25 20:37:28,826 - root - INFO - Model checkpoint saved to experiments/2024_08_25/20_35_57/model_checkpoint.pth
+2024-08-25 20:37:40,147 - root - INFO - Epoch 2/2, Train Loss: 0.0025, Val Loss: 0.0027, LR: 0.000152
+2024-08-25 20:37:40,149 - root - INFO - Validation: Accuracy: 0.5288, Precision: 0.7278, Recall: 0.6708, F1-Score: 0.6860
+2024-08-25 20:37:40,299 - root - INFO - Model checkpoint saved to experiments/2024_08_25/20_35_57/model_checkpoint.pth
+2024-08-25 20:37:51,630 - root - INFO - Epoch 3/2, Train Loss: 0.0023, Val Loss: 0.0024, LR: 0.000280
+2024-08-25 20:37:51,631 - root - INFO - Validation: Accuracy: 0.5612, Precision: 0.7716, Recall: 0.6185, F1-Score: 0.6720
+2024-08-25 20:37:51,833 - root - INFO - Model checkpoint saved to experiments/2024_08_25/20_35_57/model_checkpoint.pth
+2024-08-25 20:38:03,315 - root - INFO - Epoch 4/2, Train Loss: 0.0022, Val Loss: 0.0026, LR: 0.000437
+2024-08-25 20:38:03,316 - root - INFO - Validation: Accuracy: 0.5575, Precision: 0.7269, Recall: 0.7127, F1-Score: 0.7011
+2024-08-25 20:38:03,317 - root - INFO - 	Early stopping counter 1/5
+2024-08-25 20:38:14,735 - root - INFO - Epoch 5/2, Train Loss: 0.0021, Val Loss: 0.0026, LR: 0.000604
+2024-08-25 20:38:14,737 - root - INFO - Validation: Accuracy: 0.5909, Precision: 0.8024, Recall: 0.6036, F1-Score: 0.6597
+2024-08-25 20:38:14,738 - root - INFO - 	Early stopping counter 2/5
+2024-08-25 20:38:26,301 - root - INFO - Epoch 6/2, Train Loss: 0.0021, Val Loss: 0.0026, LR: 0.000761
+2024-08-25 20:38:26,303 - root - INFO - Validation: Accuracy: 0.5779, Precision: 0.7765, Recall: 0.6367, F1-Score: 0.6753
+2024-08-25 20:38:26,304 - root - INFO - 	Early stopping counter 3/5
+2024-08-25 20:38:37,739 - root - INFO - Epoch 7/2, Train Loss: 0.0020, Val Loss: 0.0023, LR: 0.000888
+2024-08-25 20:38:37,740 - root - INFO - Validation: Accuracy: 0.5714, Precision: 0.7624, Recall: 0.6894, F1-Score: 0.7166
+2024-08-25 20:38:37,860 - root - INFO - Model checkpoint saved to experiments/2024_08_25/20_35_57/model_checkpoint.pth
+2024-08-25 20:38:49,381 - root - INFO - Epoch 8/2, Train Loss: 0.0020, Val Loss: 0.0023, LR: 0.000971
+2024-08-25 20:38:49,382 - root - INFO - Validation: Accuracy: 0.6006, Precision: 0.8130, Recall: 0.6335, F1-Score: 0.6913
+2024-08-25 20:38:49,507 - root - INFO - Model checkpoint saved to experiments/2024_08_25/20_35_57/model_checkpoint.pth
+2024-08-25 20:39:01,029 - root - INFO - Epoch 9/2, Train Loss: 0.0020, Val Loss: 0.0024, LR: 0.001000
+2024-08-25 20:39:01,030 - root - INFO - Validation: Accuracy: 0.5677, Precision: 0.7448, Recall: 0.6759, F1-Score: 0.6956
+2024-08-25 20:39:01,031 - root - INFO - 	Early stopping counter 1/5
+2024-08-25 20:39:12,576 - root - INFO - Epoch 10/2, Train Loss: 0.0019, Val Loss: 0.0022, LR: 0.000994
+2024-08-25 20:39:12,577 - root - INFO - Validation: Accuracy: 0.6127, Precision: 0.7808, Recall: 0.6793, F1-Score: 0.7197
+2024-08-25 20:39:12,704 - root - INFO - Model checkpoint saved to experiments/2024_08_25/20_35_57/model_checkpoint.pth
+2024-08-25 20:39:24,217 - root - INFO - Epoch 11/2, Train Loss: 0.0019, Val Loss: 0.0023, LR: 0.000978
+2024-08-25 20:39:24,219 - root - INFO - Validation: Accuracy: 0.5909, Precision: 0.7796, Recall: 0.6517, F1-Score: 0.7008
+2024-08-25 20:39:24,220 - root - INFO - 	Early stopping counter 1/5
+2024-08-25 20:39:35,714 - root - INFO - Epoch 12/2, Train Loss: 0.0018, Val Loss: 0.0025, LR: 0.000950
+2024-08-25 20:39:35,716 - root - INFO - Validation: Accuracy: 0.5900, Precision: 0.7752, Recall: 0.6893, F1-Score: 0.7059
+2024-08-25 20:39:35,717 - root - INFO - 	Early stopping counter 2/5
+2024-08-25 20:39:47,275 - root - INFO - Epoch 13/2, Train Loss: 0.0018, Val Loss: 0.0023, LR: 0.000913
+2024-08-25 20:39:47,277 - root - INFO - Validation: Accuracy: 0.5881, Precision: 0.7983, Recall: 0.6449, F1-Score: 0.7019
+2024-08-25 20:39:47,278 - root - INFO - 	Early stopping counter 3/5
+2024-08-25 20:39:58,819 - root - INFO - Epoch 14/2, Train Loss: 0.0018, Val Loss: 0.0024, LR: 0.000866
+2024-08-25 20:39:58,820 - root - INFO - Validation: Accuracy: 0.6122, Precision: 0.8115, Recall: 0.6389, F1-Score: 0.6795
+2024-08-25 20:39:58,821 - root - INFO - 	Early stopping counter 4/5
+2024-08-25 20:40:10,323 - root - INFO - Epoch 15/2, Train Loss: 0.0017, Val Loss: 0.0032, LR: 0.000811
+2024-08-25 20:40:10,324 - root - INFO - Validation: Accuracy: 0.4411, Precision: 0.7189, Recall: 0.6497, F1-Score: 0.6465
+2024-08-25 20:40:10,325 - root - INFO - 	Early stopping counter 5/5
+2024-08-25 20:40:10,326 - root - INFO - 	Early stopping triggered at epoch 15
+2024-08-25 20:40:10,488 - root - INFO - Starting evaluation on test set:
+2024-08-25 20:40:11,076 - root - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+          CD       0.78      0.75      0.76       498
+         HYP       0.76      0.40      0.52       263
+          MI       0.80      0.64      0.71       553
+        NORM       0.84      0.88      0.86       964
+        STTC       0.81      0.71      0.75       523
+
+   micro avg       0.81      0.73      0.77      2801
+   macro avg       0.80      0.68      0.72      2801
+weighted avg       0.81      0.73      0.76      2801
+ samples avg       0.78      0.76      0.76      2801
+
+2024-08-25 20:40:11,096 - root - INFO - Test Accuracy: 0.619
+2024-08-25 20:40:11,098 - root - INFO - Test Precision (Macro): 0.797
+2024-08-25 20:40:11,099 - root - INFO - Test Recall (Macro): 0.677
+2024-08-25 20:40:11,100 - root - INFO - Test F1-Score (Macro): 0.723
+
+2024-08-25 20:40:11,304 - modules.visualization - INFO - Loss plot saved to loss_over_epochs.png
+2024-08-25 20:40:11,485 - modules.visualization - INFO - Learning rate plot saved to learning_rate_over_epochs.png
+2024-08-25 20:40:11,743 - modules.visualization - INFO - Metrics plots (Accuracy, Precision, Recall, F1-Score) saved to metrics_over_epochs.png
+2024-08-25 20:40:11,866 - modules.visualization - INFO - Confusion matrix for class 'CD' saved at: experiments/2024_08_25/20_35_57/results/test_confusion_matrix_CD.png
+2024-08-25 20:40:11,974 - modules.visualization - INFO - Confusion matrix for class 'HYP' saved at: experiments/2024_08_25/20_35_57/results/test_confusion_matrix_HYP.png
+2024-08-25 20:40:12,080 - modules.visualization - INFO - Confusion matrix for class 'MI' saved at: experiments/2024_08_25/20_35_57/results/test_confusion_matrix_MI.png
+2024-08-25 20:40:12,209 - modules.visualization - INFO - Confusion matrix for class 'NORM' saved at: experiments/2024_08_25/20_35_57/results/test_confusion_matrix_NORM.png
+2024-08-25 20:40:12,465 - modules.visualization - INFO - Confusion matrix for class 'STTC' saved at: experiments/2024_08_25/20_35_57/results/test_confusion_matrix_STTC.png
+2024-08-25 20:40:12,639 - modules.visualization - INFO - ROC curve saved to roc_curve.png
+2024-08-25 20:40:12,832 - modules.visualization - INFO - Precision-Recall curve saved to precision_recall_curve.png
+2024-08-25 20:40:13,088 - modules.visualization - INFO - ROC curve for each class saved to roc_curve_per_class.png
+2024-08-25 20:40:13,311 - modules.visualization - INFO - Precision-Recall curve for each class saved to precision_recall_curve_per_class.png
+2024-08-25 20:40:13,313 - root - INFO - Successfully plotted!
+
