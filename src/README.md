@@ -3,6 +3,30 @@
 ### Candidate
 - Mattia Delleani 
 
+# IMPORTANT: Revised version
+
+In response to the feedback, I have reorganized the project structure and created a new folder named `scratch`, containing the notebook called `assigment_revised.ipynb`.
+
+**Structure**:
+
+```plaintext
+.
+├── scratch # folder with ECG data
+│   │
+│   ├── modules # custom modules implemented from scratch:
+│   │   ├── utils.py
+│   │   ├── networks.py
+│   │   ├── datasets.py
+│   │   ├── data_preprocessor.py
+│   │   └── visualization.py
+│   ├── experiments # with results
+│   │ 
+│   ├── assignment_revised.ipynb # Jupyter Notebook revised
+│   ├── main.py # file for cmd line training
+│   └── README.md
+
+```
+
 ## Introduction
 
 Welcome to this project focused on implementing a machine learning (ML) classification model from scratch using the provided ECG data. The objective is to explore the problem, assess reasonable and interesting approaches within the given time constraints, and make design decisions accordingly. This repository will guide you through the entire process, from reading and analyzing ECG files to visualizing the signals and building a model that can provide actionable insights about classification.
