@@ -27,7 +27,7 @@ In response to the feedback, I have reorganized the project structure and create
 
 ```
 
-This revised assignment showcases a thorough approach to working with anonymized ECG data for machine learning applications in healthcare. The project included comprehensive steps from data loading and preprocessing to model training, validation, and testing, culminating in detailed results visualization.
+This revised assignment is based on the feedback provided: so I remove the dependencies on existing solution and provided my own implementation, especially for the data preprocessing, ML model and training. In the end I added new components (i.e GradCAM for model explainability).
 
 ## Revised Implementation
 
